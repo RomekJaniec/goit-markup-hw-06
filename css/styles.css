@@ -750,6 +750,23 @@ body {
   resize: none;
   border: 0;
 }
+.modal-checkbox {
+  opacity: 0;
+  width: 16px;
+  height: 15px;
+}
+.checkbox-border {
+  opacity: 1;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  border: solid 2px;
+  border-color: var(--dark-color-font);
+  border-radius: 3px;
+  background-color: none;
+  top: 4px;
+  left: 40px;
+}
 .modal-checkbox-label {
   font-family: Roboto;
   font-weight: 400;
@@ -757,6 +774,16 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--less-dark-color-font);
+}
+.check-icon {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+.modal-checkbox:checked + .checkbox-border {
+  border-color: var(--brand-color);
+  background-color: var(--brand-color);
+  
 }
 .modal-button-send {
   width: 200px;
@@ -786,6 +813,7 @@ body {
   color: var(--brand-color);
 }
 .modal-agreement {
+  position: relative;
   padding-left: 40px;
 }
 .modal-textarea:focus {
@@ -794,37 +822,33 @@ body {
 .modal-input:focus {
   outline: 0;
 }
-.modal-fieldset:has(input:focus) {
+.modal-fieldset:focus-within {
   border-color: var(--brand-color);
 }
-.modal-fieldset:has(input:focus) .modal-icon {
+.modal-fieldset:focus-within .modal-icon {
   fill: var(--brand-color);
 }
-.modal-fieldset-comment:has(textarea:focus) {
+.modal-fieldset-comment:focus-within {
   border-color: var(--brand-color);
 }
 .footer-input {
-  position: absolute;
   border: 0;
   background-color: transparent;
-  left: 10px;
-  top: 12px;
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
   outline: 0;
   color: var(--white);
+  width: 100%;
   padding: 0;
-  width: 95%;
 }
 .footer-fieldset {
   height: 50px;
   width: 358px;
-  position: relative; 
   border: 1px solid;
   border-color: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  padding-top: 20px;
+  padding: 11px 16px;
   margin: 0;
 }
 .footer-newsletter {
@@ -865,7 +889,7 @@ body {
   color: var(--white);
   line-height: 1.6;
   letter-spacing: 6%;
-  padding-right: 38px;;
+  padding-right: 38px;
 }
 .send-icon {
   position: absolute;
