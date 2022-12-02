@@ -765,9 +765,9 @@ body {
   border-radius: 3px;
   background-color: none;
   top: 4px;
-  left: 40px;
+  left: 54px;
 }
-.modal-checkbox-label {
+.modal-checkbox-description {
   font-family: Roboto;
   font-weight: 400;
   font-size: 14px;
@@ -813,8 +813,9 @@ body {
   color: var(--brand-color);
 }
 .modal-agreement {
+  display: flex;
   position: relative;
-  padding-left: 40px;
+  padding-left: 56px;
 }
 .modal-textarea:focus {
   outline: 0;
